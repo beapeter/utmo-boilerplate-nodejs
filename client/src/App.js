@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class App extends Component {
   state = {
     greet: [],
-  }
+  };
 
   componentDidMount() {
-    fetch('/api/v1/users')
+    fetch("/api/v1/users")
       .then(res => res.json())
       .then(greet => this.setState({ greet }));
   }
